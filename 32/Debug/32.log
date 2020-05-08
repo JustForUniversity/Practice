@@ -1,0 +1,6 @@
+﻿  Source.cpp
+D:\SomeThing\.Project\VS Code\Project\32\Fighter.h(58,13): warning C4244:  аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+D:\SomeThing\.Project\VS Code\Project\32\Fighter.h(70,13): warning C4244:  аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+D:\SomeThing\.Project\VS Code\Project\32\Fighter.h(121,1): warning C4244:  -=: преобразование "double" в "int", возможна потеря данных
+D:\SomeThing\.Project\VS Code\Project\32\Source.cpp(68,12): warning C4244:  аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+  32.vcxproj -> D:\SomeThing\.Project\VS Code\Project\32\Debug\32.exe
