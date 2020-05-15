@@ -5,6 +5,10 @@
 // 1 + 2 - 5
 // 3 + 4 * 2 / ( 1 - 5 ) ^ 2
 // -3 - 2 + 4 - 1
+// 2 ^ 2 ^ 2
+// 2 * 2 * 2
+// 2 / 2 / 2
+
 
 using namespace std;
 
@@ -59,18 +63,23 @@ string convert(string str) {
 		if (c == '+' || c == '-' || c == '*' || c == '/' || c == '^') {
 			while (true) {
 				if (!sign.empty()) {
-					if (prioritizer(sign.top()) == prioritizer(c) and (sign.top() == '/' || sign.top() == '-')) {
-						if (str[i - 1] != ' ') answ.push_back(' ');
-						answ.push_back(sign.top());
-						sign.pop();
-						continue;
-					}
 					if (prioritizer(sign.top()) > prioritizer(c)) {
 						if (str[i - 1] != ' ') answ.push_back(' ');
 						answ.push_back(sign.top());
 						sign.pop();
 						continue;
 					}
+					if (c == '^' && sign.top() == '^') {
+						//sign.push(c);
+						break;
+					}
+					if (prioritizer(sign.top()) == prioritizer(c)/* and (sign.top() == '/' || sign.top() == '-')*/) {
+						if (str[i - 1] != ' ') answ.push_back(' ');
+						answ.push_back(sign.top());
+						sign.pop();
+						continue;
+					}
+
 				}
 				break;
 			}
